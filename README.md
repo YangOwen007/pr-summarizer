@@ -69,7 +69,7 @@ npm audit
 
 Tests cover clean reviews, input limits, JSON errors, matching demo fixtures, access checks, readiness, request limiting, export provenance, and mocked provider success/failure/refusal. They do not establish live model quality. The smoke script starts and stops isolated production servers without calling OpenAI.
 
-[CI](.github/workflows/ci.yml) repeats these checks with pinned action revisions and scans Git history with Gitleaks. A production dependency audit blocks CI; the full audit remains visible as a nonblocking step because of the upstream tooling issue below. GitHub Actions has not run until this repository is published. Gitleaks Action requires a license for organization-owned repositories; personal repositories can use it without that additional setup.
+[CI](.github/workflows/ci.yml) repeats these checks with pinned action revisions and scans full Git history using a pinned, checksum-verified Gitleaks CLI. A production dependency audit blocks CI; the full audit remains visible as a nonblocking step because of the upstream tooling issue below. See the [Actions page](https://github.com/YangOwen007/pr-summarizer/actions) for current results.
 
 ## Deployment
 
