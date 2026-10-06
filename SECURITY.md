@@ -4,7 +4,7 @@ This is a prototype for pasted-code reviews. The default deployment is a fixed s
 
 ## Report a vulnerability
 
-If the repository provides GitHub private vulnerability reporting, use its Security tab. Otherwise contact the owner through an existing private channel. Do not include credentials, confidential code, or exploit payloads containing private data in a public issue. No response-time commitment or supported-version policy has been established.
+Use [GitHub private vulnerability reporting](https://github.com/YangOwen007/pr-summarizer/security/advisories/new) through the repository's Security tab. Do not include credentials, confidential code, or exploit payloads containing private data in a public issue. No response-time commitment or supported-version policy has been established.
 
 ## Credentials and input
 

@@ -79,7 +79,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel and Node server setup, verificatio
 
 Demo input stays within the app server and returns a prepared fixture. Live input and title are sent to OpenAI with `store: false`; this does not override the provider's retention policies. See [OpenAI data controls](https://developers.openai.com/api/docs/guides/your-data). Do not submit secrets, personal data, or code you lack permission to share.
 
-The application has no persistence, analytics, third-party browser scripts, or input logging. Hosting platforms and the provider may retain request metadata. Access tokens stay in browser memory, are sent in an authorization header, and must be protected with HTTPS outside localhost. Responses are not cached, and provider error details are not returned to callers.
+The application has no persistence, analytics, third-party browser scripts, or input logging. Hosting platforms and the provider may retain request metadata. Access tokens stay in browser memory, are sent in an authorization header, and must be protected with HTTPS outside localhost. Review and health responses are not cached, and provider error details are not returned to callers.
 
 See [SECURITY.md](SECURITY.md) for scope, reporting, and credential handling. The lightweight local scanner can miss credentials; Gitleaks and manual review are complementary checks, not a guarantee.
 
