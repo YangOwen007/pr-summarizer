@@ -1,0 +1,5 @@
+# Keep source and lockfiles stable across Windows and Linux checkouts.
+* text=auto eol=lf
+*.jpg binary
+# Blank context lines in the embedded unified diff intentionally contain a space.
+src/lib/sample-input.ts whitespace=-blank-at-eol
