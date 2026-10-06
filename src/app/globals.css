@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e8;
+  --foreground: #14213d;
+  --font-body: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: "Bahnschrift", "Franklin Gothic Medium", "Trebuchet MS", sans-serif;
+  --panel: rgba(255, 252, 247, 0.84);
+  --panel-strong: #fffaf3;
+  --border: rgba(20, 33, 61, 0.12);
+  --accent: #bd294c;
+  --accent-strong: #9f2140;
+  --accent-soft: rgba(239, 71, 111, 0.12);
+  --ink-soft: rgba(20, 33, 61, 0.64);
+  --success: #1f7a5c;
+  --warning: #92400e;
+  --danger: #b91c1c;
+  --shadow: 0 20px 60px rgba(20, 33, 61, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top left, rgba(255, 183, 3, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(239, 71, 111, 0.12), transparent 30%),
+    linear-gradient(180deg, #fff8ef 0%, var(--background) 54%, #f0ece5 100%);
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+}
+
+/* Base-layer defaults allow Tailwind's monospace textarea utility to take precedence. */
+@layer base {
+  button, textarea, input { font: inherit; }
+}
+
+.glass-panel {
+  background: var(--panel);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(20, 33, 61, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 33, 61, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Visible focus supports keyboard navigation; honor reduced-motion preferences. */
+:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

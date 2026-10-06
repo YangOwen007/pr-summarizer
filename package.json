@@ -1,0 +1,38 @@
+{
+  "name": "pr-summarizer",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:smoke": "node scripts/smoke.mjs",
+    "scan:secrets": "node scripts/scan-secrets.mjs",
+    "check": "npm run lint && npm run typecheck && npm test && npm run scan:secrets && npm run build && npm run test:smoke"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "openai": "^6.49.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  }
+}
